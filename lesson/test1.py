@@ -2,7 +2,13 @@ from pynput import keyboard
 
 
 def on_release(key):
-    print(f'{key} released')
+    try:
+        if key.char == 'e':
+            print('Hello worldr')
+    except:
+        print(f'{key} r eleased')
+
+
     if key == keyboard.Key.esc:
         # Stop listener
         return False
